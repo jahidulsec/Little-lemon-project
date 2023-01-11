@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Playfair+Display&family=Roboto&display=swap');
+
+.section-pad {
+  padding: 40px 200px 40px 200px;
+}
 
 h1 {
   font:bold 64px 'Markazi Text';
@@ -29,6 +34,30 @@ p {
   margin-top: 2em;
 }
 
+button {
+  padding: 12px;
+  width: 240px;
+  border-radius: 10px;
+  border: 1px solid #495E57;
+  background-color: #F4CE14;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Playfair Display';
+}
+
+button:hover {
+  background-color: #495E57;
+  color: white;
+  border: solid 1px white;
+}
+
+li {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
 
 
 
@@ -36,7 +65,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 10px 0 10px 0;
 }
 
 nav ul {
@@ -53,28 +82,35 @@ li a {
   color: black;
 }
 
+a:hover {
+  text-decoration: solid underline 3px #495E57;
+}
+
 .App-Hero {
   display: flex;
   align-items: center;
   background-color: #495E57;
   padding-bottom: 40px;
   padding-top: 20px;
-  padding-left: 200px;
-  padding-right: 200px;
+  gap: 140px;
 }
+
+.Hero-content {
+  display: grid;
+  justify-items: flex-start;
+  max-width: 500px;
+}
+
 .Hero-Image {
+  position: relative;
+  margin-bottom: -80px;
   border-radius: 16px;
-  margin-left: 100px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
 }
+
 
 .Hero-Title {
   color: #F4CE14;
-}
-
-.App-Header {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .Hero-Sub-Tittle {
@@ -84,21 +120,9 @@ li a {
   color: white;
 }
 
-button {
-  background-color: #F4CE14;
-  font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  border-radius: 16px;
-  border: none;
-  padding: 10px;
-}
 
 .App-Highlights {
-  padding: 80px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
 }
@@ -137,13 +161,11 @@ button {
 }
 
 .card-title {
-  font-family: 'Karla';
   font-size: 18px;
   font-weight: bold;
 }
 
 .card-description {
-  font-family: 'Karla';
   font-size: 16px;
 }
 
@@ -153,16 +175,21 @@ button {
 }
 
 .card-price {
-  font-family: 'Karla';
-  font-size: 16px;
-  font-weight: 500;
+  font-family: "Markazi Text";
+  font-size: 24px;
+  font-weight: 400;
   color: #EE9972;
 }
 
 .card-order {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
+}
+
+.card-order-description{
+  margin: 0em;
+  padding: 0em;
 }
 
 .App-Testimonials {
@@ -171,8 +198,6 @@ button {
   justify-content: center;
   align-items: center;
   background-color: #D9D9D9;
-  padding: 80px;
-
 }
 
 .testimonial-title {
@@ -203,14 +228,17 @@ button {
 
 .App-About {
   display: flex;
-  gap: 100px;
-  padding: 80px;
-  padding-left: 200px;
-  padding-right: 200px;
+  gap: 200px;
 }
 
-.App-About img {
+.about-image1, .about-image2 {
   border-radius: 16px;
+  box-shadow: rgba(12, 11, 11, 0.418) 1.95px 1.95px 2.6px;
+}
+
+.about-image2 {
+  position: relative;
+  margin: -80px 0 0 -80px;
 }
 
 .app-footer {
@@ -230,4 +258,56 @@ button {
 .footer ul li {
   list-style: none;
   font: 14px 'Roboto';
+}
+
+.booking_section {
+  background-color: #EDEFEE;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+fieldset {
+  display: flex;
+  width: 480px;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+label {
+  margin-bottom: 8px;
+  font-family: 'Playfair Display';
+  font-size: 14px;
+}
+
+input,
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 32px;
+  padding: 0 8px;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+}
+
+.Field {
+  position: relative;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: red;
+  margin: 5px;
+  font: 12px "Playfair Display";
+  font-weight: 600;
 }

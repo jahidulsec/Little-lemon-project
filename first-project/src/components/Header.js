@@ -1,6 +1,5 @@
 import Nav from "./Nav";
 import logo from "../Image/logo1.png"
-import { BrowserRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Header () {

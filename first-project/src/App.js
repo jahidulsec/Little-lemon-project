@@ -6,7 +6,10 @@ import { Route, Routes } from 'react-router-dom';
 import BookingPage from './components/BookingPage';
 
 
-function App() {
+
+
+function App () {
+
   return (
     <>
       <Header />

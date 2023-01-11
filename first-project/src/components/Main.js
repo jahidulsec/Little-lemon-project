@@ -45,11 +45,13 @@ function Main (){
             comment: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
             personImage: () => require('../Image/avatar.png'),
         },
-    ]
+    ];
+
+
 
     return (
         <div className="homepage">
-            <div className="App-Hero">
+            <div className="App-Hero section-pad">
                 <div className='Hero-content'>
                     <h1 className='Hero-Title'>Little Lemon</h1>
                     <h2 className="Hero-Sub-Tittle">Chicago</h2>
@@ -61,12 +63,12 @@ function Main (){
                 <img
                     className='Hero-Image'
                     src={require('../Image/restauranfood.jpg')}
-                    width="375px"
-                    height="375px"
+                    width="250px"
+                    height="355px"
                     alt="Restaurant food image"
                 />
             </div>
-            <div className="App-Highlights">
+            <div className="App-Highlights section-pad">
                 <div className="App-rows-title">
                     <h2>This weeks Specials!</h2>
                     <button>Online Menu</button>
@@ -82,7 +84,7 @@ function Main (){
                     ))}
                 </div>
             </div>
-            <div className="App-Testimonials">
+            <div className="App-Testimonials section-pad">
                 <h2 className="testimonial-title">Testimonials</h2>
                 <div className='rating-cards'>
                     {ratingCard.map((person) => (
@@ -95,7 +97,7 @@ function Main (){
                     ))}
                 </div>
             </div>
-            <div className="App-About">
+            <div className="App-About section-pad">
                 <div className="about-content">
                     <h2>Little Lemon</h2>
                     <h3>Chicago</h3>
@@ -104,10 +106,18 @@ function Main (){
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
                     </p>
                 </div>
-                <img
-                    src={require("../Image/restaurant.jpg")}
-                    alt="restaurant image"
-                    width='375px' />
+                <div className="about-image">
+                    <img
+                        className="about-image1"
+                        src={require("../Image/restaurant.jpg")}
+                        alt="restaurant image"
+                        width='275px' />
+                    <img
+                        className="about-image2"
+                        src={require("../Image/restaurant chef B.jpg")}
+                        alt="restaurant image"
+                        width='275px' />
+                </div>
             </div>
         </div>
     )

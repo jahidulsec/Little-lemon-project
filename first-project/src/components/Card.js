@@ -11,7 +11,7 @@ function Card ({title, description, price, image}) {
                 </div>
                 <p className='card-description'>{description}</p>
                 <div  className="card-order">
-                     <p>Order Online</p>
+                     <p className='card-order-description'>Order Online</p>
                     <img src={require('../Image/bike_icon.png')} height="20px" alt='bike logo' />
                  </div>
             </div>

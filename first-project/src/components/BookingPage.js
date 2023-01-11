@@ -1,17 +1,48 @@
+import { getValue } from '@testing-library/user-event/dist/utils';
+import { useReducer } from 'react';
+import BookingForm from './BookingForm'
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'add': {
+            return [
+                ...state, {
+                    date: action.pickDate,
+                    time: action.pickTime,
+                }
+            ]
+        }
+    }
+
+    throw Error('Unknown action' + action.type);
+}
+
+const initalState = [
+    {date: "2023-01-14", time: "17:00"},
+    {date: "2023-01-14", time: "18:00"}
+];
 
 
 
+export default function BookingPage () {
+
+    const [availableTimes, dispatch] = useReducer(reducer,initalState);
 
 
-function BookingPage () {
-
-
+    function handleInput (date, time) {
+        dispatch({
+            type: "add",
+            pickDate: date,
+            pickTime: time,
+        })
+    }
 
     return (
-        <div>
-            <h1>What are you going to do!</h1>
+        <div className='booking_section'>
+            <BookingForm
+                data={availableTimes}
+                onAdd={handleInput}
+            />
         </div>
     );
 }
-
-export default BookingPage;
