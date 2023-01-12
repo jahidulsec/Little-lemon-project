@@ -1,4 +1,3 @@
-import { getValue } from '@testing-library/user-event/dist/utils';
 import { useReducer } from 'react';
 import BookingForm from './BookingForm'
 
@@ -18,8 +17,8 @@ function reducer(state, action) {
 }
 
 const initalState = [
-    {date: "2023-01-14", time: "17:00"},
-    {date: "2023-01-14", time: "18:00"}
+    {date: "2023-01-14", time: "18:00"},
+    {date: "2023-01-14", time: "17:00"}
 ];
 
 

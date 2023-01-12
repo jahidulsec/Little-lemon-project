@@ -14,14 +14,14 @@ export default function BookingForm ({data, onAdd}) {
     const [occasion, setOccasion] = useState("birthday");
 
     let available = data
-        .filter((t)=> t.date === date)
-        .map((t)=> t.time)
+    .filter((t)=> t.date === date)
+    .map((t)=> t.time)
 
     useEffect(() => {
         console.log(available);
         console.log(available.time)
         console.log(date)
-        console.log(available.filter((a) => a === "17:00")[0] )
+        console.log(available.filter((a) => a === "17:00") )
     }, [date])
 
 
@@ -86,7 +86,7 @@ export default function BookingForm ({data, onAdd}) {
                             onChange={(e)=>{setGuest(e.target.value)}} />
                     </div>
                     <div className="Field">
-                        <label htmlFor="occasion">Choose time</label>
+                        <label htmlFor="occasion">Choose occasion</label>
                         <select id="occasion" value={occasion} onChange={ (e) => {setOccasion(e.target.value)}}>
                             <option value="birthday">Birthday</option>
                             <option value="anniversary">Anniversary</option>
