@@ -1,39 +1,34 @@
 import { useEffect, useState } from "react";
+import Option from "./Option";
 
 
 let currentDate = new Date().toJSON().slice(0, 10);
 
 
+export default function BookingForm ({ bookingData,availableTimes,onAddBooking, onUpdateTime }) {
 
-export default function BookingForm ({data, onAdd}) {
 
-
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState(currentDate);
     const [time, setTime] = useState("");
     const [guest, setGuest] = useState("1");
     const [occasion, setOccasion] = useState("birthday");
 
-    let available = data
-    .filter((t)=> t.date === date)
-    .map((t)=> t.time)
+    //let convertedDate = new Date(date);
 
+    
     useEffect(() => {
-        console.log(available);
-        console.log(available.time)
-        console.log(date)
-        console.log(available.filter((a) => a === "17:00") )
+        console.log(bookingData)
+        console.log(availableTimes)
+        console.log("")
     }, [date])
 
-
+    
     const getValid = () => {
-        return (
-            time &&
-            date
-        )
+        return time;
     }
 
     const clearForm = () => {
-        setDate("");
+        setDate(currentDate);
         setGuest("1");
         setTime("");
         setOccasion("birthday");
@@ -44,6 +39,8 @@ export default function BookingForm ({data, onAdd}) {
         alert("Thanks for your booking!");
         clearForm();
     }
+
+    
 
 
     return (
@@ -65,14 +62,8 @@ export default function BookingForm ({data, onAdd}) {
                         <select
                             id="time" value={time} onChange={ (e) => {setTime(e.target.value)}}>
                             <option value="">Pick a time</option>
-                            {available.filter((a) => a === "17:00")[0] ==="17:00" ? null : <option value="17:00">17:00</option>}
-                            {available.filter((a) => a === "18:00")[0] ==="18:00" ? null : <option value="18:00">18:00</option>}
-                            {available.filter((a) => a === "19:00")[0] ==="19:00" ? null : <option value="19:00">19:00</option>}
-                            {available.filter((a) => a === "20:00")[0] ==="20:00" ? null : <option value="20:00">20:00</option>}
-                            {available.filter((a) => a === "21:00")[0] ==="21:00" ? null : <option value="21:00">21:00</option>}
-                            {available.filter((a) => a === "22:00")[0] ==="22:00" ? null : <option value="22:00">22:00</option>}
+                            <Option time={availableTimes} />
                         </select>
-                        {available.length === 6 ? <h6 className="error-msg">No slot available</h6> : null}
                     </div>
                     <div className="Field">
                         <label htmlFor="guest">Number of guests</label>
@@ -87,7 +78,13 @@ export default function BookingForm ({data, onAdd}) {
                     </div>
                     <div className="Field">
                         <label htmlFor="occasion">Choose occasion</label>
-                        <select id="occasion" value={occasion} onChange={ (e) => {setOccasion(e.target.value)}}>
+                        <select
+                            id="occasion"
+                            value={occasion}
+                            onChange={ (e) => {
+                                setOccasion(e.target.value);
+                                onUpdateTime(e.target.value);
+                        }}>
                             <option value="birthday">Birthday</option>
                             <option value="anniversary">Anniversary</option>
                         </select>
@@ -95,13 +92,11 @@ export default function BookingForm ({data, onAdd}) {
                     <button
                         type="submit"
                         disabled = {!getValid()}
-                        onClick = {()=>{onAdd(date, time)}}
+                        onClick = {() => {onAddBooking(date, time, guest, occasion)}}
                         >
                             Make your reservation
                         </button>
                 </fieldset>
             </form>
-
     )
 }
-
