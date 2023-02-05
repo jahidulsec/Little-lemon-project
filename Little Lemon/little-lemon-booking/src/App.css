@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&display=swap');
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.primary-yel {
+    color: #F4CE14;
+}
+
+.primary-whi {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #EDEFEE;
+    background-color: #495E57;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* font style */
+.title {
+    font: 500 64px "Markazi Text";
+    margin: 20px 0 20px 0;
+}
+
+.hero .title {
+    color: #F4CE14;
+}
+
+.highlights .title {
+    color: #495E57;
+}
+
+.sub-title {
+    font: 400 40px "Markazi Text";
+}
+
+.hero .sub-title {
+    color: white;
+}
+
+.description {
+    font: 500 18px "karla";
+}
+.hero .description {
+    color: white;
+}
+
+.section-title {
+    font: 800 20px "Karla";
+    margin: 10px 0 20px 0;
+}
+
+.section-description {
+    font: 800 16px "karla";
+}
+
+.card-title {
+    font: 700 18px "Karla";
+}
+
+.card-price {
+    font: 700 18px "Karla";
+    color: #EE9972;
+}
+
+.card-description {
+    font: 400 16px "karla";
+}
+
+.nav-title, nav ul li {
+    font: 400 16px "Karla";
+}
+
+.footer .nav-title {
+    color: #495E57;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.errorMsg {
+    margin: 5px 0 0 0;
+    padding: 0;
+    color: #EE9972;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 16px 'karla';
+}
+
+
+/* Desktop look */
+
+/* define grid */
+
+.col-12 {
+    display: grid;
+    grid-template-columns: repeat(8, 90px);
+    column-gap: 20px;
+    padding: 20px 290px 20px 290px;
+}
+
+/* header */
+.header-img {
+    justify-self: center;
+    align-self: center;
+}
+
+.header nav {
+    grid-column: 2 / 8;
+    align-self: center;
+    padding: 0px;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header nav a, .header-img a {
+    display: inline-block;
+    padding: 5px;
+}
+
+/* hero section */ 
+
+.hero {
+    background-color: #495E57;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.hero-content {
+    grid-column: 1 / 4;
+}
+
+.hero img {
+    grid-column: 4 / 8;
+    align-self: center;
+    justify-self: end;
+    margin-bottom: -80px;
+    border-radius: 5px;
+}
+
+/* highlights */
+
+.highlights {
+    margin: 50px 0 50px 0;
+}
+
+.highlights-section-header, .card-section {
+    grid-column: 1 / 8;
+}
+
+.highlights-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.highlight-card {
+    background-color: #EDEFEE;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(122, 122, 122, 0.2);
+}
+
+.highlight-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header, .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content {
+    padding: 14px;
+}
+
+/* testimonials */
+.testimonials {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EDEFEE;
+}
+
+.testimonials .section-title, .testimonials .rating-section {
+    grid-column: 1 / 8;
+    justify-self: center;
+}
+
+.rating-section {
+    display: flex;
+    gap: 30px;
+}
+
+.rating-card {
+    background-color: white;
+    width: 160px;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(122, 122, 122, 0.2);
+}
+
+.rating-card .profile {
+    display: flex;
+    flex-direction: column;
+}
+
+/* about */
+
+
+
+.about-content {
+    grid-column: 1 / 4;
+}
+
+.about-img {
+    grid-column: 5 / 8;
+    align-self: center;
+}
+.about-img1 {
+    position: relative;
+    left: 70px;
+    top: 70px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #EDEFEE;
+}
+
+.footer img {
+    grid-column: 1;
+}
+
+.footer-doormat-nav {
+    grid-column: 2 / 4;
+}
+
+.footer-contact {
+    grid-column: 4 / 6;
+}
+
+.footer-social {
+    grid-column: 6 / 8;
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    list-style: none;
+}
+
+/* effects */ 
+
+.btn {
+    height: 40px;
+    width: 160px;
+    border-radius: 10px;
+    background-color: #F4CE14;
+    color: black;
+    border: none;
+    font: 700 16px "Karla";
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #495E57;
+    color: white;
+    border: 1px solid white;
+}
+
+/* form */
+
+.booking {
+    background-color: #495E57;
+} 
+
+.form-fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: 30px 100px 100px;
+    column-gap: 20px;
+}
+
+
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: 50px;
+    margin-bottom: 0;
+    column-gap: 20px;
+
+}
+
+
+.date {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.size {
+    grid-column: 2;
+    grid-row: 2;
+}
+.occasion {
+    grid-column: 1;
+    grid-row: 3;
+}
+.time {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    margin: 10px 0 10px 0;
+}
+
+ 
+select, input[type="date"]  {
+    background-color: #EDEFEE;
+    box-shadow: 2px 2px 2px 1px rgba(122, 122, 122, 0.2);
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    font: 800 16px "Karla";
+    text-align: center;
+    appearance: none;
+    color: #495E57;
+} 
+
+#time {
+    background-image: url('../src/Image/Icons/schedule_FILL0_wght700_GRAD0_opsz48.svg');
+    background-repeat: no-repeat;
+    background-position: 40px;
+    background-size: 30px;
+}
+
+#occasion {
+    background-image: url('../src/Image/Icons/celebration_FILL1_wght700_GRAD0_opsz48.svg');
+    background-repeat: no-repeat;
+    background-position: 40px;
+    background-size: 30px;
+}
+
+#size {
+    background-image: url('../src/Image/Icons/person_FILL1_wght700_GRAD0_opsz48.svg');
+    background-repeat: no-repeat;
+    background-position: 40px;
+    background-size: 30px;
+}
+
+#date {
+    background-image: url('../src/Image/Icons/calendar_month_FILL1_wght700_GRAD0_opsz48.svg');
+    background-repeat: no-repeat;
+    background-position: 40px;
+    background-size: 30px;
+}
+
+
+label {
+    font: 500 16px "Karla";
+    padding-right: 20px;
+    color: white;
+}
+
+.booking-footer {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+ 
+.booking-page-img {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.img-btn {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.img-section {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.img-section img {
+    margin: 40px 0 40px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(122, 122, 122, 0.2);
+    object-fit: cover;
+}
+
+
+/* confirmation page */ 
+
+.confirm-page {
+    background-color: #495E57;
+}
+
+.con-field-section {
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    background-color: #EDEFEE;
+    width: 350px;
+    height: 20px;
+    border-radius: 4px;
+    font: 700 16px "Karla";
+    box-shadow: 2px 2px 2px 1px rgba(122, 122, 122, 0.2);
+    padding: 10px;
+} 
+
+.invalid-border {
+    border: 2px solid #EE9972;
+  }
+
+
+textarea {
+    background-color: #EDEFEE;
+    width: 350px;
+    border: none;
+    border-radius: 4px;
+    font: 700 16px "Karla";
+    padding: 10px;
+}
+
+.prev-data-table {
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+}
+
+.prev-data {
+    display: flex;
+    align-items: center;
+    font: 700 16px "Karla";
+    color: white;
+}
+
+.error-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #EE9972;
+    font: 500 16px 'karla';
+}
+
+.error-field:hover {
+    cursor: pointer;
+}
+
+.error-content {
+    display: flex;
+    justify-content: center;    
+}
+
+
+
+span {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.agreement {
+    font-size: 12px;
+}
